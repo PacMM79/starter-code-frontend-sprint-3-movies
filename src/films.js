@@ -62,7 +62,6 @@ function convertToMinutes(time) {
   const regex = /(?:(\d+)h\s*)?(?:(\d+)\s*min)?/;
   const parts = time.match(regex);
   if (!parts) {
-    console.log("Formato no válido");
     return 0;
   }
   const horas = parseInt(parts[1], 10) || 0;
