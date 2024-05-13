@@ -291,10 +291,46 @@ describe('Function "orderByYear"', () => {
 });
 
 // Exercise 6
-// YOUR CODE HERE. Test moviesAverageByCategory()
 describe('Function "moviesAverageByCategory"', () => {
-  it('ADD YOUR CODE IN films.spec.js file', () => {
-    expect(typeof hoursToMinutes).toBe('function');
+  it('should be declared', () => {
+    expect(typeof moviesAverageByCategory).toBe('function');
+  });
+  it('should return a number', () => {
+    expect(typeof moviesAverageByCategory(movies, 'Drama')).toBe('number');
+  });
+  it('should return 0 if no exist any movie of a category', () => {
+    expect(moviesAverageByCategory(movies, 'noCategory')).toBe(Number('0.00'));
+  });
+  it('second parameter cannot be an empty string', () => {
+    expect(moviesAverageByCategory(movies, '')).toBe(Number('0.00'));
+  });
+  it('second parameter must be a string', () => {
+    const result = moviesAverageByCategory(movies, 1);
+    expect(typeof result).toBe('string');
+    expect(result).toBe('Category must be a string');
+  });
+  it('should return 2 decimals', () => {
+    const result = moviesAverageByCategory(movies, 'Drama');
+    expect(String(result)).toMatch(new RegExp(/^\d+\.\d{2}$/));
+  });
+  it('should return the average of the movies in a category', () => {
+    const testArr = [
+      {
+        title: 'Film1',
+        score: 8.4,
+        genre: ['Drama']
+      },
+      {
+        title: 'Film2',
+        score: 8.2,
+        genre: ['Drama']
+      },
+      {
+        title: 'Film3',
+        score: 8.1,
+        genre: ['Drama']
+      }
+    ];
   });
 });
 
