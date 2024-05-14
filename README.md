@@ -84,3 +84,8 @@ an array of information about 250 movies.
 - Don't forget to include the capture of the test results in the virtual campus.
 
 
+## Test results - Screenshot
+
+<p align="center">
+<a href="https://ibb.co/WsgJXFw"><img src="https://i.ibb.co/QXrwVnR/Test-Solution-Sprint3.png" alt="Test-Solution-Sprint3" border="0"></a>
+</p>
